@@ -1,0 +1,52 @@
+main color is primary-500
+////////
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+You can put any valid JavaScript expression inside the curly braces in JSX
+
+////////
+
+After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+
+/////////
+Whether you declare a component as a function or a class, it must never modify its own props.
+React is pretty flexible but it has a single strict rule:
+All React components must act like pure functions with respect to their props.
+////////
+**imp**
+
+template literals:-
+
+(` `)
+
+
+Template literals can be used to represent multi-line strings and may use "interpolation" to insert variables:
+
+var a = 123, str = `---
+   a is: ${a}
+---`;
+console.log(str);
+
+
+Output:
+
+---
+   a is: 123
+---
+
+What is more important, they can contain not just a variable name, but any JavaScript expression:
+
+var a = 3, b = 3.1415;
+
+console.log(`PI is nearly ${Math.max(a, b)}`);
+
+//////////////////////////
+
+
